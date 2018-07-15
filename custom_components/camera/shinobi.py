@@ -23,6 +23,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 
 @asyncio.coroutine
 def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
+    shinobi = loader.get_component(hass, 'shinobi')
+    
     all_monitors = shinobi.get_all_started_monitors()
 
     if not all_monitors:
