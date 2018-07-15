@@ -13,8 +13,6 @@ _LOGGER = logging.getLogger(__name__)
 DEPENDENCIES = ['shinobi']
 DOMAIN = 'shinobi'
 
-shinobi = loader.get_component('shinobi')
-
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_WHITELIST, default=[]): cv.ensure_list,
     vol.Optional(CONF_BLACKLIST, default=[]): cv.ensure_list
